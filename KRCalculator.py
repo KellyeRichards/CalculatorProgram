@@ -50,7 +50,7 @@ operations = {
     "√": square_root,
 }
 
-#It must automatically copy the result to the operating system clipboard
+#It must automatically copy the result to the operating system clipboard (windows for this program)
 def clipboard_copy(text):
     if sys.platform.startswith("win"):
         # sub function executes echo and clip commands
@@ -70,7 +70,7 @@ def calculator():
         to_continue = True
 
         while to_continue:
-            operation_sign = input("Please choose an operation from the line above to be performed: ")
+            operation_sign = input("Choose an operation from the line above to be performed: ")
 
             # This section breaks the loop if q is the input
             if operation_sign == 'q':
@@ -92,7 +92,7 @@ def calculator():
                 number1 = solution
             else:
                 print("Invalid!")
-    
+    # Exit message
     print("Exiting calculator...")
 
 calculator()
